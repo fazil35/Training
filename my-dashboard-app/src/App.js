@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useContext } from 'react';
+import styled from 'styled-components';
+import { AppContext } from './context/AppContext';
+import GlobalStyle from './styles/GlobalStyle';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import WeatherWidget from './components/WeatherWidget';
+import TodoListWidget from './components/TodoListWidget';
 
-function App() {
+const AppContainer = styled.div`
+  display: flex;
+  height: 100vh;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const MainContent = styled.main`
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+`;
+
+const App = () => {
+  const { weatherVisible, todoVisible } = useContext(AppContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <Header />
+      <AppContainer>
+        <Sidebar />
+        <MainContent>
+          {weatherVisible && <WeatherWidget />}
+          {todoVisible && <TodoListWidget />}
+        </MainContent>
+      </AppContainer>
+    </>
   );
-}
+};
 
 export default App;
