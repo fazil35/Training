@@ -1,4 +1,3 @@
-// src/components/WeatherWidget.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
@@ -22,9 +21,9 @@ const ErrorMessage = styled.div`
 
 const WeatherWidget = () => {
   const [weather, setWeather] = useState(null);
-  const [location, setLocation] = useState('New York');
+  const [location, setLocation] = useState('chennai');
   const [error, setError] = useState('');
-  const apiKey = 'affbb7db1e554c799d34c5873c78015f';  // Replace with your actual Weatherbit API key
+  const apiKey = 'affbb7db1e554c799d34c5873c78015f';
 
   useEffect(() => {
     const fetchWeather = async () => {

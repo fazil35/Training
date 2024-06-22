@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { AppContext } from './context/AppContext';
@@ -27,6 +26,13 @@ const MainContent = styled.main`
   }
 `;
 
+const NoDataMessage = styled.h2`
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.5em;
+`;
+
 const App = () => {
   const { weatherVisible, todoVisible } = useContext(AppContext);
 
@@ -39,6 +45,7 @@ const App = () => {
         <MainContent>
           {weatherVisible && <WeatherWidget />}
           {todoVisible && <TodoListWidget />}
+          {(!weatherVisible && !todoVisible) && <NoDataMessage>No data available</NoDataMessage>}
         </MainContent>
       </AppContainer>
     </>

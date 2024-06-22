@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# TodoListWidget and WeatherWidget
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A project containing a Todo List application and a Weather Widget, both built with React and styled-components.
 
-## Available Scripts
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Todo List Widget](#todo-list-widget)
+  - [Weather Widget](#weather-widget)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+### Prerequisites
+- Node.js (v12 or higher)
+- npm (v6 or higher) or yarn
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Steps
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/todolist-weather-widget.git
+    cd todolist-weather-widget
+    ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Install dependencies:**
+    Using npm:
+    ```bash
+    npm install
+    ```
 
-### `npm test`
+    Using yarn:
+    ```bash
+    yarn install
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Start the development server:**
+    Using npm:
+    ```bash
+    npm start
+    ```
 
-### `npm run build`
+    Using yarn:
+    ```bash
+    yarn start
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Open your browser and navigate to:**
+    ```text
+    http://localhost:3000
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Todo List Widget
 
-### `npm run eject`
+1. **Add a Todo:**
+   - Enter the text in the input field and click the "Add" button.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Toggle a Todo:**
+   - Click the "Toggle" button next to the todo item to mark it as completed or not completed.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Edit a Todo:**
+   - Click the "Edit" button next to the todo item, update the text in the input field, and click "Save".
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Delete a Todo:**
+   - Click the "Delete" button next to the todo item to remove it.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Weather Widget
 
-## Learn More
+1. **Get a Weatherbit API Key:**
+   - Sign up at [Weatherbit](https://www.weatherbit.io/) and get your API key.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Configure the API Key:**
+   - Open `src/components/WeatherWidget.js` and replace the `apiKey` value with your actual Weatherbit API key.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Check the Weather:**
+   - Enter a location in the input field to fetch the current weather data for that location.
 
-### Code Splitting
+## Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Todo List Widget:**
+  - Add new todos
+  - Toggle todos as completed or not completed
+  - Edit existing todos
+  - Delete todos
+  - Responsive design
+  - Persistent storage using local storage
 
-### Analyzing the Bundle Size
+- **Weather Widget:**
+  - Fetches and displays current weather data for a specified location
+  - Displays temperature, humidity, and weather conditions
+  - Handles errors and displays appropriate messages
+  - Responsive design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Screenshots
 
-### Making a Progressive Web App
+![TodoListWidget Screenshot](screenshot_todo.png)
+![WeatherWidget Screenshot](screenshot_weather.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
+Contributions are welcome! Please open an issue or submit a pull request for any changes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a pull request
 
-### Deployment
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

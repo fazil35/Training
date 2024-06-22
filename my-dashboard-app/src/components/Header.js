@@ -1,18 +1,18 @@
-// src/components/Header.js
 import React from 'react';
 import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
-  background-color: #6200ea;
-  color: white;
-  padding: 10px;
+  background-color: white;
+  color: #1A1B41;
+  padding-top: 4px;
+  height: 60px;
   text-align: center;
 `;
 
 const Header = () => {
   return (
     <HeaderContainer>
-      <h1>Dashboard</h1>
+      <h4>Weather Widget - Todo List</h4>
     </HeaderContainer>
   );
 };
