@@ -1,12 +1,10 @@
-// src/components/Sidebar.js
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { AppContext } from '../context/AppContext';
 
 const SidebarContainer = styled.div`
-  background-color: #333;
+  background-color: #1A1B41;
   color: white;
-  padding: 10px;
   width: 200px;
   
   @media (max-width: 768px) {
@@ -19,15 +17,14 @@ const SidebarContainer = styled.div`
 const SidebarButton = styled.button`
   display: block;
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  background-color: #444;
+  padding: 20px;
+  background-color: #1A1B41;
   border: none;
   color: white;
   cursor: pointer;
 
   &:hover {
-    background-color: #555;
+    background-color: #0069E4;
   }
 
   @media (max-width: 768px) {
